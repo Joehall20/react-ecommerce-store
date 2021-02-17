@@ -1,0 +1,49 @@
+/*Colour Setup*/
+:root {
+  --mainNav: #181818;
+  --mainWhite: #ffffff;
+  --mainDark: #000000;
+  --mainGreen: #0f3f00;
+  --mainRed: #360000;
+}
+/*Font Setup (Bootstrap Override)*/
+.body {
+  font-family: "Roboto slab", sans-serif !important;
+  color: var(--mainDark) !important;
+}
+.title {
+  font-family: "Share Tech Mono", monospace !important;
+  font-weight: bold;
+  text-transform: uppercase !important;
+}
+.nav-link {
+  font-family: "Share Tech Mono", monospace !important;
+  text-transform: uppercase !important;
+  font-size: 2rem !important;
+}
+.trash-icon {
+  cursor: pointer;
+}
+.text-count {
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
+  font-size: 1.3rem !important;
+  border-radius: 5px;
+  pointer-events: none;
+  border: 0.2rem solid var(--mainDark) !important;
+}
+.btn-value {
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+  text-transform: capitalize;
+  font-size: 1.5rem !important;
+  border: 0.2rem solid var(--mainDark) !important;
+}
+.btn-value:hover {
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
+}
+.car-img {
+  max-width: 100vw;
+  height: auto;
+}
