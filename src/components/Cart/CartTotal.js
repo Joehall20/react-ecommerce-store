@@ -16,20 +16,20 @@ export default function CartTotal({value,history}) {
                         </Link>
                         <h5>
                             <strong>
-                                £ {cartSubtotal}
+                            Subtotal £ {cartSubtotal}
                             </strong>
                         </h5>
                         <h5>
                             <strong>
-                                £ {cartTax}
+                            Tax:  £ {cartTax}
                             </strong>
                         </h5>
                         <h5>
                             <strong>
-                                £ {cartTotal}
+                            Total: £ {cartTotal}
                             </strong>
                         </h5>
-                        <PayPalButton total={cartTotal} deleteCart={deleteCart} history={history}/>
+                        <PayPalButton total={cartTotal} history={history} deleteCart={deleteCart}/>
                     </div>
                 </div>
             </div>
