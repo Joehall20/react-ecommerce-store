@@ -5,11 +5,13 @@
   --mainDark: #000000;
   --mainGreen: #0f3f00;
   --mainRed: #360000;
+  --grey: rgb(145, 145, 145);
 }
 /*Font Setup (Bootstrap Override)*/
 .body {
   font-family: "Roboto slab", sans-serif !important;
   color: var(--mainDark) !important;
+  text-align: justify;
 }
 .title {
   font-family: "Share Tech Mono", monospace !important;
@@ -46,4 +48,29 @@
 .car-img {
   max-width: 100vw;
   height: auto;
+}
+.socials-footer {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 0.5em;
+  text-align: right;
+}
+.socials-footer .socials-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: var(--mainNav);
+  border-radius: 2px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 0px;
+}
+.socials-icons a:hover {
+  color: var(--mainDark);
+  background-color: var(--grey);
 }

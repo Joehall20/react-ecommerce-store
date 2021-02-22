@@ -8,19 +8,22 @@ export default class Home extends Component {
     
     render() {
         return (  
-            <div className="py-5 bg-dark">
-                    <Carousel autoPlay={true} interval={4000} indicators={false}>
+            <div className="bg-dark">
+                    <Carousel autoPlay={true} interval={3000} controls={false} indicators={false}>
                         <Carousel.Item>
-                            <img className="mx-auto d-block h-100" src={'img/product1_carousel.png'} width="auto"/>
+                            <img className="mx-auto d-block img-fluid" src={'img/product1_carousel.png'}/>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img className="mx-auto d-block h-100" src={'img/product4.png'} width="auto"/>
+                            <img className="mx-auto d-block img-fluid" src={'img/product4.png'} width="auto"/>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img className="mx-auto d-block h-100" src={'img/product3.png'} width="auto"/>
+                            <img className="mx-auto d-block img-fluid" src={'img/product3.png'} width="auto"/>
                         </Carousel.Item>
                     </Carousel>
+
             </div>  
+            
+
     )  
     }
 }

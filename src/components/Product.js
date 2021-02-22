@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 export default class Product extends Component {
     render() {
-        const { id, title, imgMain, img1, price, incart } = this.props.product;
+        const { id, title, imgMain } = this.props.product;
         return (
             <ProductWrap className="mx-center col-xs-1 col-md-1 col-lg-6 my-3 ">
                 <div className="card">
@@ -19,7 +19,8 @@ export default class Product extends Component {
                                     {title}
                                 </div>
                             </Link>
-                        </div>)}
+                        </div>
+                        )}
                     </ProductConsumer>
                 </div>
                 

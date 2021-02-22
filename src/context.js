@@ -10,7 +10,7 @@ class ProductProvider extends Component {
         detailProduct: detailProduct,
         cart:[],
         cartSubtotal: 0,
-        cartTax: 0,
+        cartShipping: 0,
         cartTotal: 0
     };
     componentDidMount(){
@@ -28,7 +28,7 @@ class ProductProvider extends Component {
     };
 
     getItem = id => {
-        const product = this.state.products.find(item => item.id ===id);
+        const product = this.state.products.find(item => item.id === id);
         return product;
     }
 
@@ -42,6 +42,7 @@ class ProductProvider extends Component {
         let tempProducts = [...this.state.products];
         const index = tempProducts.indexOf(this.getItem(id));
         const product = tempProducts[index];
+        product.inCart = true;
         product.count = 1;
         const price = product.price;
         product.total = price;
@@ -133,10 +134,14 @@ class ProductProvider extends Component {
     totals = () => {
         let subTotal = 0;
         this.state.cart.map(item =>(subTotal += item.total));
-        const total = subTotal;
+        //Change shipping percentage
+        const tempShipping = subTotal * 0.05;
+        const shipping = parseFloat(tempShipping.toFixed(2));
+        const total = subTotal + shipping;
         this.setState(()=>{
             return{
                 cartSubtotal: subTotal,
+                cartShipping: shipping,
                 cartTotal:total
             }
         })

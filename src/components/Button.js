@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 /*Cart Button Styled-Components Setup/ style*/ 
 export const CartButton = styled.button`
-    text-transform: capitalize;
+    text-transform: uppercase;
     background-color: white;
     border-radius: 6px;
     color: var(--mainDark);
@@ -13,9 +13,7 @@ export const CartButton = styled.button`
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     &:hover{
-        background: var(--mainDark);
-        background-color:${props => (props.cartbtn? "var(--mainGreen)":"var(--mainDark)")}; //Allows dynamic colour changing
-        color: var(--mainWhite);
+        background: ${props => props.cartBtn ? "var(--mainRed)":"var(--mainDark)"}; //Allows dynamic colour changing
+        color: var(--grey);
     }
-
 `;

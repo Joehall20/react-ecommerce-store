@@ -5,13 +5,15 @@ import {CartButton} from './Button';
 
 export default class Details extends Component {
     render() {
+        
         return (
             <ProductConsumer>
                 {(value)=>{
-                    const {id, imgMain, img1, info, price, title, incart, count} = value.detailProduct;
                     
+                    const {id, imgMain, img1, info, price, title, inCart} = value.detailProduct;
                     return (
                         <div className="container py-5">
+                            
                             {/*title*/}
                             <div className="row">
                                 <div className="col-10 mx-auto text-center text-black my-2 title">
@@ -34,18 +36,23 @@ export default class Details extends Component {
                                             <span>£</span>{price}
                                         </strong>
                                     </h4>
-                                    {/*Button*/}
+                            {/*Button*/}
                                 <div>
                                     <Link to='/productList'>
-                                        <CartButton  prodbtn>
+                                        <CartButton prodbtn>
                                             Back to Products
                                         </CartButton>
                                     </Link>
-                                    <CartButton cartbtn onClick={()=>{
-                                        value.addToCart(id)
-                                    }}>
-                                        Add to Cart
-                                    </CartButton>
+
+                                    <Link to='/cart'>
+                                        <CartButton cartBtn 
+                                        disabled={inCart ? true : false} 
+                                        onClick={() => {
+                                            value.addToCart(id);
+                                            }}>
+                                                {inCart ? "Go to Cart" : "Add to Cart"}
+                                        </CartButton>
+                                    </Link>
                                 </div>
                                 </div>
                             

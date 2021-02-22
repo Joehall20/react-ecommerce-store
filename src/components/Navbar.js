@@ -35,7 +35,8 @@ export default class Navbar extends Component {
                         My Cart
                     </CartButton>
                 </Link>
-            </NavWrap>
+                
+            </NavWrap>            
         )
     }
 }
